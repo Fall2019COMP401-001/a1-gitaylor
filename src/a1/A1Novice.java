@@ -14,6 +14,7 @@ public class A1Novice {
 		
 		int numberCustomers = scan.nextInt();
 		
+		
 		// For each customer, records their first name, last name, and number of items
 		
 		for (int i = numberCustomers; i > 0; i--) {
@@ -26,7 +27,6 @@ public class A1Novice {
 			
 			int numberOfItems = scan.nextInt();
 			
-			
 			// Sets total cost at zero for each new customer
 			
 			double total = 0; 
@@ -37,7 +37,10 @@ public class A1Novice {
 				
 				int amount = scan.nextInt();
 				
-				// WILL I NEED TO RECORD THE NAME OF THE ITEM HERE TO AVOID MESSING UP THE PROGRAM? 
+				// So the tokens line up I'm calling the item name even though I don't need it 
+				
+				String itemName = new String();
+				itemName = scan.next();
 				
 				double cost = scan.nextDouble();
 				
