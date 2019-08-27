@@ -31,8 +31,10 @@ public class A1Adept {
 		double totalSpent = 0;
 		
 		double prevSpent = 0;
+		
 		String topSpender = "placeholder";
 		double topAmount = 0;
+		
 		String lowSpender = "placeholder";
 		double lowAmount = 0;
 		
@@ -60,18 +62,30 @@ public class A1Adept {
 						
 						amountSpent += cost;
 						
+						
 					}
 				}
 				
 			}
 			 
+		
+			// TEST HERE System.out.println("TEST: Amount spent is: " + amountSpent);
 			totalSpent += amountSpent;
 			
-			if (amountSpent >= prevSpent) {
+			// Assesses whether or not the customer is the highest/lowest spender
+			
+			if ((amountSpent >= topAmount) && (lowAmount == 0)) {
 				topSpender = firstName + " " + lastName;
 				topAmount = amountSpent; 
 				
-			} else {
+				lowSpender = firstName + " " + lastName;
+				lowAmount = amountSpent;
+				// problem here determining lowest 
+			} else if (amountSpent >= topAmount) {
+				topSpender = firstName + " " + lastName;
+				topAmount = amountSpent; 
+				
+			} else if (amountSpent <= lowAmount) {
 				lowSpender = firstName + " " + lastName;
 				lowAmount = amountSpent; 
 			}
