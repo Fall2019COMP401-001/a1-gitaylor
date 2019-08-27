@@ -28,8 +28,6 @@ public class A1Adept {
 		
 		int numberCustomers = scan.nextInt();
 		
-		System.out.println("TEST: Number of customers is: " + numberCustomers);
-		
 		double totalSpent = 0;
 		
 		double prevSpent = 0;
@@ -45,8 +43,6 @@ public class A1Adept {
 			String firstName = scan.next();
 			String lastName = scan.next();
 			
-			System.out.println("TEST: " + firstName);
-			
 			int itemsBought = scan.nextInt();
 			double amountSpent = 0;
 			
@@ -57,14 +53,10 @@ public class A1Adept {
 				int numberBought = scan.nextInt();
 				String itemBought = scan.next();
 				
-				System.out.println("TEST: Number of " + itemBought + " bought: " + numberBought);
-				
 				
 				for (int l = 0; l < numberItems; l++) {
 					if (itemBought.equals(items[l])) {
 						double cost = numberBought * prices[l];
-						
-						System.out.println("TEST: Total cost: " + cost);
 						
 						amountSpent += cost;
 						
@@ -72,9 +64,6 @@ public class A1Adept {
 				}
 				
 			}
-	
-			
-			System.out.println("TEST: Total amount spent: " + amountSpent);
 			 
 			totalSpent += amountSpent;
 			
