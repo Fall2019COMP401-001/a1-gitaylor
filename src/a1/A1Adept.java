@@ -30,8 +30,6 @@ public class A1Adept {
 		
 		double totalSpent = 0;
 		
-		double prevSpent = 0;
-		
 		String topSpender = "placeholder";
 		double topAmount = 0;
 		
@@ -68,8 +66,6 @@ public class A1Adept {
 				
 			}
 			 
-		
-			// TEST HERE System.out.println("TEST: Amount spent is: " + amountSpent);
 			totalSpent += amountSpent;
 			
 			// Assesses whether or not the customer is the highest/lowest spender
@@ -90,9 +86,9 @@ public class A1Adept {
 				lowAmount = amountSpent; 
 			}
 			
-			prevSpent = amountSpent; 
-			
 		}
+		
+		scan.close();
 		
 		System.out.println("Biggest: " + topSpender + " (" + String.format("%.2f", topAmount) + ")");
 		System.out.println("Smallest: " + lowSpender + " (" + String.format("%.2f", lowAmount) + ")"); 
